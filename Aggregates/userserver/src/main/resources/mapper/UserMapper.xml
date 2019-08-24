@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qf.userserver.dao.UserMapper">
+
+    <select id="findUser" resultType="com.qf.userserver.entity.User">
+        SELECT
+	        `user`.username
+        FROM
+            `user`
+        WHERE
+            flag = 1
+        AND username = #{user.username};
+    </select>
+
+    <select id="checkLogin" resultType="com.qf.userserver.entity.User">
+        SELECT
+            `user`.username,
+            `user`.`password`
+        FROM
+            `user`
+        WHERE
+             flag = 1
+        AND username = #{user.username}
+        AND password = #{user.password};
+    </select>
+
+    <insert id="registerUser" >
+    INSERT INTO `user` (
+            `username`,
+            `password`,
+            `sex`
+        )
+        VALUES
+            (#{user.username},
+            #{user.password},
+            #{user.password});
+    </insert>
+</mapper>

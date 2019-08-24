@@ -1,0 +1,30 @@
+spring:
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://cdb-rm2lg37n.gz.tencentcdb.com:10051/aggregate?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC
+    username: root
+    password: 5201314Ss
+    hikari:
+      minimum-idle: 5
+      idle-timeout: 600000
+      maximum-pool-size: 10
+      auto-commit: true
+      pool-name: MyHikariCP
+      max-lifetime: 1800000
+      connection-timeout: 30000
+      connection-test-query: SELECT 1
+  activemq:
+    broker-url:
+    server:
+      port: 8081
+
+logging:
+  file: ../logs/spring-boot-hello.log
+  level.org.springframework.web: DEBUG
+
+
+
+mybatis-plus:
+  type-aliases-package: com.qf.userserver.entity
+  mapper-locations: classpath:mapper/*.xml
