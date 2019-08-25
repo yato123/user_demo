@@ -9,6 +9,7 @@
         <option value="$PROJECT_DIR$/dependencies/pom.xml" />
         <option value="$PROJECT_DIR$/polymerization/pom.xml" />
         <option value="$PROJECT_DIR$/userserver/pom.xml" />
+        <option value="$PROJECT_DIR$/common/pom.xml" />
       </list>
     </option>
   </component>

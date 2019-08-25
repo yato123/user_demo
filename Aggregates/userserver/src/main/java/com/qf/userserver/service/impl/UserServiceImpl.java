@@ -1,8 +1,9 @@
 package com.qf.userserver.service.impl;
 
 import com.qf.userserver.dao.UserMapper;
-import com.qf.userserver.entity.User;
+
 import com.qf.userserver.service.IUserService;
+import entity.User;
 import org.springframework.beans.factory.annotation.Autowire;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -42,7 +43,6 @@ public class UserServiceImpl implements IUserService {
 
             }
             else {
-                System.out.println("草拟马");
                 return -1;
             }
         }else {

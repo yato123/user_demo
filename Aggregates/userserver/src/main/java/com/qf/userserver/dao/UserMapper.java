@@ -1,6 +1,7 @@
 package com.qf.userserver.dao;
 
-import com.qf.userserver.entity.User;
+
+import entity.User;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 

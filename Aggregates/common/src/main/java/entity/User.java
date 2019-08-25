@@ -1,4 +1,4 @@
-package com.qf.userserver.entity;
+package entity;
 
 public class User {
     private int id;
@@ -57,4 +57,6 @@ public class User {
                 ", sex='" + sex + '\'' +
                 '}';
     }
+
+
 }

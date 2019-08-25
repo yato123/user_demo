@@ -1,0 +1,16 @@
+spring:
+  application:
+    # ������
+    name: service-consumer
+
+
+  cloud:
+    nacos:
+      discovery:
+        # ����ע������
+        server-addr: 106.13.29.192:80
+
+server:
+  # ����˿�
+  port: 8080
+

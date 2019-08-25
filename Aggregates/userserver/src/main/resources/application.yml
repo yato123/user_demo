@@ -1,8 +1,14 @@
 spring:
+  application:
+    # 服务名
+    name: service-user
+
+
+
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://cdb-rm2lg37n.gz.tencentcdb.com:10051/aggregate?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC
+    url: jdbc:mysql://cdb-rm2lg37n.gz.tencentcdb.com:10051/aggregate
     username: root
     password: 5201314Ss
     hikari:
@@ -14,10 +20,13 @@ spring:
       max-lifetime: 1800000
       connection-timeout: 30000
       connection-test-query: SELECT 1
-  activemq:
-    broker-url:
-    server:
-      port: 8081
+  cloud:
+    nacos:
+      discovery:
+        # 服务注册中心
+        server-addr: 106.13.29.192:80
+server:
+  port: 8082
 
 logging:
   file: ../logs/spring-boot-hello.log
@@ -26,5 +35,6 @@ logging:
 
 
 mybatis-plus:
-  type-aliases-package: com.qf.userserver.entity
+  type-aliases-package: entity
   mapper-locations: classpath:mapper/*.xml
+
