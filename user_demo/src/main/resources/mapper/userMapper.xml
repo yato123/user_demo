@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qf.user_demo.mapper.UserMapper">
+    <select id="findAll" resultType="com.qf.user_demo.entity.User">
+        SELECT
+            u.id,
+            u.username,
+            u.age,
+            u.sex
+        FROM
+            `users` u
+        WHERE
+            u.`exists` = 1
+    </select>
+
+    <select id="findUserByName"   resultType="com.qf.user_demo.entity.User" >
+    SELECT
+        u.id,
+        u.username,
+        u.age,
+        u.sex
+    FROM
+        `users` u
+    WHERE
+        u.username LIKE CONCAT ('%',#{username},'%')
+    AND u.`exists` = 1
+
+
+    OR u.username  LIKE CONCAT ('%',#{username},'%')
+    AND u.`exists` = 1
+
+
+    OR u.username  LIKE CONCAT ('%',#{username},'%')
+    AND u.`exists` = 1
+    limit 1
+
+    </select>
+
+    <update id="updateUserById" >
+    UPDATE users
+    SET username = #{username},
+     `password` = #{password},
+        age = #{age},
+        sex = #{sex}
+    WHERE
+        id = #{id}
+    AND users.`exists` = 1
+    </update>
+
+    <insert id="addUser" parameterType="com.qf.user_demo.entity.User" >
+    INSERT INTO `user`.`users` (
+        `username`,
+        `password`,
+        `age`,
+        `sex`
+    )
+    VALUES
+        (
+            #{username},
+            #{password},
+            #{age},
+            #{sex}
+        )
+    </insert>
+
+    <update id="delUser"  >
+    UPDATE users
+    SET `exists` = 0
+    WHERE
+        id = #{id}
+    </update>
+</mapper>

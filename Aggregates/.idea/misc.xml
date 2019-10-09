@@ -10,6 +10,8 @@
         <option value="$PROJECT_DIR$/polymerization/pom.xml" />
         <option value="$PROJECT_DIR$/userserver/pom.xml" />
         <option value="$PROJECT_DIR$/common/pom.xml" />
+        <option value="$PROJECT_DIR$/gateway/pom.xml" />
+        <option value="$PROJECT_DIR$/gatewaysecond/pom.xml" />
       </list>
     </option>
   </component>

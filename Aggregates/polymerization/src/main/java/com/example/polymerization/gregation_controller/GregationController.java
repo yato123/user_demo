@@ -13,7 +13,6 @@ public class GregationController {
     private AggregationService aggregationService;
     @RequestMapping("/register")
     public String registerUser(User user){
-        System.out.println("爱你"+user);
         if (aggregationService.registerUser(user) >0){
             return "注册成功。。。";
         }return "注册失败。。。";

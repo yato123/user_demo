@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
 
-        <groupId>com.qf.aggregate</groupId>
+        <groupId>com.qf</groupId>
         <artifactId>dependencies</artifactId>
         <version>1.0-SNAPSHOT</version>
         <relativePath/> <!-- lookup parent from repository -->

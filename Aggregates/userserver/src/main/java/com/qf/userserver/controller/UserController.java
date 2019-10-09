@@ -15,14 +15,25 @@ public class UserController {
     private UserServiceImpl userService;
 
     @RequestMapping(value = "/register",method = RequestMethod.POST)
-    int register(@RequestBody User user){
-        System.out.println("草拟"+user);
-        return userService.registerUser(user);
+    String register(@RequestBody User user){
+        if (userService.registerUser(user)>0){
+            return "注册成功";
+        }else {
+            return "注册失败";
+        }
     }
     @RequestMapping("/login")
-    public User login(User user){
-        return userService.checkLogin(user);
+    public String login(User user){
+        if (userService.checkLogin(user) != null){
+            return "登录成功";
+        }else {
+            return "登陆失败";
+        }
     }
+        @RequestMapping("/test")
+        public String testwg(){
+            return "网关测试成功";
+        }
 
 
 }

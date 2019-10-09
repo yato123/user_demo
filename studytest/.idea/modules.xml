@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/bussines/bussines.iml" filepath="$PROJECT_DIR$/bussines/bussines.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bussines/bussines-user/bussines-user.iml" filepath="$PROJECT_DIR$/bussines/bussines-user/bussines-user.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bussines/bussines-user-feign/bussines-user-feign.iml" filepath="$PROJECT_DIR$/bussines/bussines-user-feign/bussines-user-feign.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dependencies/dependencies.iml" filepath="$PROJECT_DIR$/dependencies/dependencies.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eureka/eureka.iml" filepath="$PROJECT_DIR$/eureka/eureka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gateway/gateway.iml" filepath="$PROJECT_DIR$/gateway/gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/studytest.iml" filepath="$PROJECT_DIR$/studytest.iml" />
+    </modules>
+  </component>
+</project>
